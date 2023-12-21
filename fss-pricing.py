@@ -393,7 +393,7 @@ Resources:
               csv_writer.writerows(csv_file_content)
               s3.put_object(
                   Bucket=str(os.environ.get('ATHENA_BUCKET')),
-                  Key='estadisticas/' + csv_filename,
+                  Key='Data/' + csv_filename,
                   Body=csv_buffer.getvalue().encode('utf-8')
               )
 
